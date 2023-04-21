@@ -1,7 +1,7 @@
 package com.hunterhint.hunterhint.presentation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.hunterhint.hunterhint.R
 
 class DetailActivity : AppCompatActivity() {
@@ -10,7 +10,11 @@ class DetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail)
         val fragment = supportFragmentManager.findFragmentById(R.id.detail_frag)
                 as GroundDetailFragment
-        fragment.groundId = 1
 
+        fragment.groundId = intent.extras!!.getInt(EXTRA_GROUND_ID)
+    }
+
+    companion object {
+        const val EXTRA_GROUND_ID: String = "id"
     }
 }
