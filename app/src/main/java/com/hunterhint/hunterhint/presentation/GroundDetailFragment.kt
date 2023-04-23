@@ -1,12 +1,15 @@
 package com.hunterhint.hunterhint.presentation
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import com.hunterhint.hunterhint.R
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.hunterhint.hunterhint.presentation.models.Ground
 
 
 class GroundDetailFragment : Fragment() {
@@ -29,6 +32,8 @@ class GroundDetailFragment : Fragment() {
             title.text = ground.name
             val description = view.findViewById(R.id.textDescription) as TextView
             description.text =ground.description
+            val image = view.findViewById(R.id.imageView) as ImageView
+            image.setImageResource(ground.imageId)
         }
     }
 

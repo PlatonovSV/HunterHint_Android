@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.fragment.app.ListFragment
 import com.hunterhint.hunterhint.R
+import com.hunterhint.hunterhint.presentation.adapters.GroundListAdapter
+import com.hunterhint.hunterhint.presentation.models.Ground
 
 
 class GroundsListFragment : ListFragment() {
@@ -30,7 +32,7 @@ class GroundsListFragment : ListFragment() {
         for (ground in Ground.grounds) {
             names.add(ground.name)
         }
-        val adapter:ArrayAdapter<String> = ArrayAdapter(inflater.context, R.layout.list_item, names)
+        val adapter = GroundListAdapter(inflater.context, R.layout.list_item, Ground.grounds)
         listAdapter = adapter
         return super.onCreateView(inflater, container, savedInstanceState)
     }
