@@ -32,8 +32,6 @@ class GroundDetailFragment : Fragment() {
             title.text = ground.name
             val description = view.findViewById(R.id.textDescription) as TextView
             description.text =ground.description
-            val image = view.findViewById(R.id.imageView) as ImageView
-            image.setImageResource(ground.imageId)
         }
     }
 
