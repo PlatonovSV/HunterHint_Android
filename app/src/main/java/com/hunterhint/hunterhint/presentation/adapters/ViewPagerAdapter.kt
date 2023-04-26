@@ -1,19 +1,19 @@
 package com.hunterhint.hunterhint.presentation.adapters
 import android.content.Context
-import android.provider.ContactsContract.CommonDataKinds.Im
+import android.graphics.Bitmap
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.LinearLayout
 import androidx.viewpager.widget.PagerAdapter
 import com.hunterhint.hunterhint.R
+import java.util.LinkedList
 import java.util.Objects
 
 
 class ViewPagerAdapter(// Context object
     context: Context, // Array of images
-    private var images: IntArray
+    private var images: LinkedList<Bitmap>
 ) :
     PagerAdapter() {
     // Layout Inflater
@@ -42,7 +42,7 @@ class ViewPagerAdapter(// Context object
         val imageView = itemView.findViewById(R.id.imageViewMain) as ImageView
 
         // setting the image in the imageView
-        imageView.setImageResource(images[position])
+        imageView.setImageBitmap(images[position])
 
         // Adding the View
         Objects.requireNonNull(container).addView(itemView)

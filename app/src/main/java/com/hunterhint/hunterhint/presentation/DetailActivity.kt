@@ -11,7 +11,7 @@ class DetailActivity : AppCompatActivity() {
         val fragment = supportFragmentManager.findFragmentById(R.id.detail_frag)
                 as GroundDetailFragment
 
-        fragment.groundId = intent.extras!!.getInt(EXTRA_GROUND_ID)
+        fragment.setGround(id = intent.extras!!.getInt(EXTRA_GROUND_ID))
     }
 
     companion object {

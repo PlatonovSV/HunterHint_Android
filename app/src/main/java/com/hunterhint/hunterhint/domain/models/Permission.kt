@@ -1,13 +1,14 @@
 package com.hunterhint.hunterhint.domain.models
 
-enum class Permission {
-    BOOK_TOUR,
-    OWNER_CLOSE_BOOKING,
-    OWNER_ADD_GROUND,
-    OWNER,
-    ADMIN,
-    DELETE_ANY_COMMENT,
-    DELETE_ANY_GROUND,
-    BLOCK_ANY_GROUND,
-    BLOCK_ANY_USER
+enum class Permission (val id:Int) {
+    BOOK_TOUR(0),
+    OWNER_CLOSE_BOOKING(1),
+    OWNER_ADD_GROUND(2),
+    OWNER(3),
+    ADMIN(4),
+    DELETE_ANY_COMMENT(5),
+    DELETE_ANY_GROUND(6),
+    BLOCK_ANY_GROUND(7),
+    BLOCK_ANY_USER(8),
+    ADD_COMMENT(9)
 }

@@ -1,29 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="50dp"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/textTitle" />
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:name="com.hunterhint.hunterhint.presentation.ImageSliderFragment"
-        android:layout_width="match_parent"
-        android:id="@+id/imageSlider"
-        android:layout_height="300dp"
-        tools:layout="@layout/fragment_image_slider"
-        android:layout_marginBottom="50dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textDescription" />
-</LinearLayout>
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/imageSlider"
+                android:name="com.hunterhint.hunterhint.presentation.ImageSliderFragment"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginBottom="50dp"
+                tools:layout="@layout/fragment_image_slider" />
+
+            <TextView
+                android:id="@+id/textDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
